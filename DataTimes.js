@@ -63,7 +63,7 @@ describe('Data Times website', () => {
     })
     
     it('get search(tags-input-wrapper-default) and test if it works ', () => {
-        cy.get('.tags-input-wrapper-default').type('Wales')
+        cy.get('[type="text"]').type('Wales')
 
     })
 
@@ -72,7 +72,7 @@ describe('Data Times website', () => {
             .contains('Communities').click()
         cy.get('.text-black').contains('404')
         cy.get('.text-grey-darker').contains('Sorry, the page you are looking for could not be found.')
-        cy.get('.bg-transparent').contains('Go Home').click()
+        cy.get('.bg-transparent').contains('Go Home').click({ force: true })
         cy.url().should('include', '/dev.thedatatimes.com')
     })
 
@@ -82,7 +82,7 @@ describe('Data Times website', () => {
             .contains('Wales').click()
         cy.get('.text-black').contains('404')
         cy.get('.text-grey-darker').contains('Sorry, the page you are looking for could not be found.')
-        cy.get('.bg-transparent').contains('Go Home').click()
+        cy.get('.bg-transparent').contains('Go Home').click({ force: true })
         cy.url().should('include', '/dev.thedatatimes.com')
     })
 
@@ -92,7 +92,7 @@ describe('Data Times website', () => {
             .contains('Council').click()
         cy.get('.text-black').contains('404')
         cy.get('.text-grey-darker').contains('Sorry, the page you are looking for could not be found.')
-        cy.get('.bg-transparent').contains('Go Home').click()
+        cy.get('.bg-transparent').contains('Go Home').click({ force: true })
         cy.url().should('include', '/dev.thedatatimes.com')
     })
 
@@ -102,7 +102,7 @@ describe('Data Times website', () => {
             .contains('Homelessness').click()
         cy.get('.text-black').contains('404')
         cy.get('.text-grey-darker').contains('Sorry, the page you are looking for could not be found.')
-        cy.get('.bg-transparent').contains('Go Home').click()
+        cy.get('.bg-transparent').contains('Go Home').click({ force: true })
         cy.url().should('include', '/dev.thedatatimes.com')
     })
 
@@ -112,7 +112,7 @@ describe('Data Times website', () => {
             .contains('Household').click()
         cy.get('.text-black').contains('404')
         cy.get('.text-grey-darker').contains('Sorry, the page you are looking for could not be found.')
-        cy.get('.bg-transparent').contains('Go Home').click()
+        cy.get('.bg-transparent').contains('Go Home').click({ force: true })
         cy.url().should('include', '/dev.thedatatimes.com')
     })
 

@@ -1,17 +1,21 @@
-describe('Data Times website', () => {
+describe('Data Times website SearchResults', () => {
     beforeEach(function () {
         cy.visit('https://dev.thedatatimes.com/')
         cy.get('[type="text"]').type('Household')
         cy.get('.tags-input-typeahead-item-highlighted-default').click()
         cy.get('.searchButtonLabel').click({ force: true })
+            .wait(4000)
 
     })
-    it('exits Logo(providerLogo) and if it works', () => {
+
+
+    it('exits Logo(providerLogo)', () => {
         cy.get('.providerLogo').should('have', 2)
     })
 
-
-
+    it('exits button(exploreButton) und if it work', () => {
+        cy.get('.card-body').contains('Explore Data').click()
+    })
     it('exits button(communities) and if it works', () => {
         cy.get('.flexItem-3').contains('Communities').click()
         cy.get('.text-black').contains('404')

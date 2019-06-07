@@ -57,7 +57,7 @@ describe('Data Times website', () => {
         cy.get('.searchButtonLabel').contains('Search Data Times')
 
     })
-    
+
     it('get search(tags-input-wrapper-default) and test if it works ', () => {
         cy.get('[type="text"]').type('Wales')
         cy.get('.searchButtonLabel').click()
@@ -97,7 +97,7 @@ describe('Data Times website', () => {
         cy.get('.text-black').contains('404')
         cy.get('.text-grey-darker').contains('Sorry, the page you are looking for could not be found.')
         cy.get('.bg-transparent').contains('Go Home')
-        
+
     })
 
 
@@ -107,7 +107,7 @@ describe('Data Times website', () => {
         cy.get('.text-black').contains('404')
         cy.get('.text-grey-darker').contains('Sorry, the page you are looking for could not be found.')
         cy.get('.bg-transparent').contains('Go Home')
-        
+
     })
 
 
